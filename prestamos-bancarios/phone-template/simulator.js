@@ -5,7 +5,7 @@
   var params = new URLSearchParams(window.location.search);
   if (params.get("mode") === "credit") {
     var creditScript = document.createElement("script");
-    creditScript.src = "./credit-app.js?v=credit-approval-v11";
+    creditScript.src = "./credit-app.js?v=credit-approval-v12";
     document.head.appendChild(creditScript);
     return;
   }

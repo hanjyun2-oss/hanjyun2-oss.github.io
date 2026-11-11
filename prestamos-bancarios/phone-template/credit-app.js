@@ -22,7 +22,7 @@
 
   var css = document.createElement("link");
   css.rel = "stylesheet";
-  css.href = "./credit-app.css?v=credit-approval-v11";
+  css.href = "./credit-app.css?v=credit-approval-v12";
   document.head.appendChild(css);
 
   var enterprises = [
