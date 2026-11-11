@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>南方资产 · 手机助手</title>
+    <script>
+      const phoneParams = new URLSearchParams(location.search)
+      if (phoneParams.get('embedded') === '1') document.documentElement.classList.add('embedded-phone')
+      if (phoneParams.get('solidBackground') === '1') document.documentElement.classList.add('solid-background')
+    </script>
+    <link rel="icon" href="./assets/south-asset-icon.png" />
+    <link rel="stylesheet" href="./styles.css?v=q3-floating-20260909" />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="phone" aria-label="手机模版">
+        <span class="side-btn mute" aria-hidden="true"></span>
+        <span class="side-btn vol-up" aria-hidden="true"></span>
+        <span class="side-btn vol-down" aria-hidden="true"></span>
+        <span class="side-btn power" aria-hidden="true"></span>
+
+        <div class="shell">
+          <div class="bezel">
+            <div class="notch" aria-hidden="true">
+              <span class="speaker"></span>
+              <span class="camera"></span>
+            </div>
+
+            <section class="screen" id="phone-screen" aria-label="手机屏幕" role="application" aria-live="polite"></section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./market-content.js?v=market-q3-20260909"></script>
+    <script src="./simulator.js?v=credit-approval-v11"></script>
+  </body>
+</html>

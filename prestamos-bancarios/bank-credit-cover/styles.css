@@ -1,0 +1,97 @@
+:root {
+  color-scheme: light;
+  background: #effcfc;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+/* A single fixed design canvas. Only its display scale changes. */
+.cover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2704px;
+  height: 1040px;
+  margin: 0;
+  overflow: hidden;
+  background: #effcfc;
+  transform: translate(-50%, -50%) scale(var(--cover-scale, 0));
+  transform-origin: center;
+}
+
+.cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+}
+
+.motion-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+html[data-locale='en'] .pain-copy-layer,
+html[data-locale='en'] .globe-copy-layer,
+html[data-locale='en'] .badge-copy-layer,
+html[data-locale='en'] .motion-layer,
+html[data-locale='es-419'] .pain-copy-layer,
+html[data-locale='es-419'] .globe-copy-layer,
+html[data-locale='es-419'] .badge-copy-layer,
+html[data-locale='es-419'] .motion-layer { display: none; }
+
+.step-highlights {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* One platform at a time: 2 seconds per step, 16 seconds per cycle. */
+.step-highlight {
+  opacity: 0;
+  animation: platform-light 16s step-end infinite;
+  animation-delay: var(--step-delay, 0s);
+}
+
+.platform-uplight {
+  transform: none;
+}
+
+@keyframes platform-light {
+  0% { opacity: 1; }
+  12.5%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-highlight { animation: none; opacity: 0; }
+  .step-highlight[data-step="01"] { opacity: 1; }
+}
+
+.pain-copy-layer,
+.globe-copy-layer,
+.badge-copy-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="本体空间赋能银行信贷：打通数据与规则，提升授信决策效率。" />
+    <title>本体空间赋能银行信贷</title>
+    <script>
+      const coverLanguage = new URLSearchParams(location.search).get('lang')
+      if (coverLanguage === 'en' || coverLanguage === 'es-419') {
+        document.documentElement.dataset.locale = coverLanguage
+        document.addEventListener('DOMContentLoaded', () => {
+          const coverImage = document.querySelector('.cover-image')
+          coverImage.src = `./assets/credit-cover-${coverLanguage}.png`
+          coverImage.alt = coverLanguage === 'en'
+            ? 'Ontology Space for Bank Credit: eight stages from business profiling to risk response. Illustrative demo only.'
+            : 'Espacio ontológico para crédito bancario: ocho etapas desde el perfil empresarial hasta la gestión del riesgo. Demostración ilustrativa.'
+        }, { once: true })
+      }
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./fit.js" defer></script>
+    <script src="./motion.js" defer></script>
+  </head>
+  <body>
+    <main class="cover" aria-label="银行信贷本体空间封面">
+      <img
+        class="cover-image"
+        src="./assets/credit-cover.png"
+        width="2022"
+        height="778"
+        fetchpriority="high"
+        draggable="false"
+        alt="本体空间赋能银行信贷。打通数据与规则，提升授信决策效率。信贷业务痛点：客户真实性难辨，核验成本高；准入规则繁杂，真实风险难判断；人工匹配效率低，产品选择依赖经验；风险发现滞后，前瞻预警不足；规模与风控冲突，处置偏被动。信贷流程：01 企业画像，整合经营、财务、资质、风险；02 征信核验；03 评级准入，统一规则，自动校验；04 现场尽调；05 产品匹配，按客户特征智能推荐；06 授信放款；07 贷后监控，持续监测，及时预警；08 风险处置，识别风险，推动处置。本体空间：统一语义、可信约束、审批溯源。"
+      />
+      <svg class="pain-copy-layer" viewBox="0 0 2022 778" role="img" aria-label="信贷业务痛点：客户真实性难辨，核验成本高；准入规则繁杂，真实风险难判断；人工匹配效率低，产品选择依赖经验；风险发现滞后，前瞻预警不足；规模与风控冲突，处置偏被动" focusable="false">
+        <foreignObject x="0" y="0" width="2022" height="778"><canvas xmlns="http://www.w3.org/1999/xhtml" id="pain-copy-background" width="2022" height="778" style="width:100%;height:100%" aria-hidden="true"></canvas></foreignObject>
+        <g fill="#193b62" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="21" font-weight="500" aria-hidden="true">
+          <text x="164" y="252"><tspan x="164">客户真实性难辨</tspan><tspan x="164" dy="30" fill="#7b858e">核验成本高</tspan></text>
+          <text x="164" y="355"><tspan x="164">准入规则繁杂</tspan><tspan x="164" dy="30" fill="#7b858e">真实风险难判断</tspan></text>
+          <text x="164" y="459"><tspan x="164">人工匹配效率低</tspan><tspan x="164" dy="30" fill="#7b858e">产品选择依赖经验</tspan></text>
+          <text x="164" y="563"><tspan x="164">风险发现滞后</tspan><tspan x="164" dy="30" fill="#7b858e">前瞻预警不足</tspan></text>
+          <text x="164" y="670"><tspan x="164">规模与风控冲突</tspan><tspan x="164" dy="30" fill="#7b858e">处置偏被动</tspan></text>
+        </g>
+      </svg>
+      <svg class="globe-copy-layer" viewBox="0 0 2022 778" aria-hidden="true" focusable="false">
+        <foreignObject x="0" y="0" width="2022" height="778"><canvas xmlns="http://www.w3.org/1999/xhtml" id="globe-copy-background" width="2022" height="778" style="width:100%;height:100%"></canvas></foreignObject>
+      </svg>
+      <canvas class="motion-layer" width="2704" height="1040" aria-label="AOS 球体，四个方向的文字随球体旋转，仅显示朝向观众的文字"></canvas>
+      <svg class="step-highlights" viewBox="0 0 2022 778" aria-hidden="true" focusable="false">
+        <defs>
+          <!-- Diffuse upward light: radial falloff has no vertical box edges. -->
+          <radialGradient id="uplight-halo" cx="50%" cy="72%" r="50%" fy="78%">
+            <stop offset="0" stop-color="#10b9a7" stop-opacity=".56" />
+            <stop offset=".38" stop-color="#29c5b2" stop-opacity=".36" />
+            <stop offset=".7" stop-color="#53d4c3" stop-opacity=".17" />
+            <stop offset="1" stop-color="#53d4c3" stop-opacity="0" />
+          </radialGradient>
+          <filter id="occlusion-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="9" />
+          </filter>
+          <filter id="icon-mask-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" />
+          </filter>
+          <linearGradient id="platform-uplight" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#00a892" stop-opacity="0" />
+            <stop offset=".45" stop-color="#00a892" stop-opacity=".24" />
+            <stop offset="1" stop-color="#009e87" stop-opacity=".72" />
+          </linearGradient>
+          <radialGradient id="platform-top-glow">
+            <stop offset="0" stop-color="#e5fffb" stop-opacity=".76" />
+            <stop offset=".55" stop-color="#1fbaa3" stop-opacity=".46" />
+            <stop offset="1" stop-color="#00a892" stop-opacity="0" />
+          </radialGradient>
+          <filter id="uplight-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="8" />
+          </filter>
+          <linearGradient id="platform-wash" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#27bfa8" stop-opacity=".43" />
+            <stop offset=".35" stop-color="#1caf99" stop-opacity=".30" />
+            <stop offset="1" stop-color="#149f8a" stop-opacity=".20" />
+          </linearGradient>
+          <clipPath id="platform-01"><path d="M 466.00 538.75 Q 466.00 520.00 487.45 515.12 L 611.55 486.88 Q 633.00 482.00 654.47 486.79 L 768.53 512.21 Q 790.00 517.00 790.00 535.25 L 790.00 571.75 Q 790.00 590.00 768.78 595.82 L 647.22 629.18 Q 626.00 635.00 604.66 629.66 L 487.34 600.34 Q 466.00 595.00 466.00 576.25 Z" /></clipPath>
+          <clipPath id="platform-02"><path d="M 737.74 475.42 L 788.26 458.58 Q 793 457 797.68 458.75 L 847.32 477.25 Q 852 479 852.00 484.00 L 852.00 537.00 Q 852 542 847.17 543.29 L 796.83 556.71 Q 792 558 787.22 556.54 L 737.78 541.46 Q 733 540 733.00 535.00 L 733.00 482.00 Q 733 477 737.74 475.42 Z" /></clipPath>
+          <clipPath id="platform-03"><path d="M 833.00 468.00 Q 833.00 452.00 848.36 447.51 L 923.64 425.49 Q 939.00 421.00 954.74 423.86 L 1055.26 442.14 Q 1071.00 445.00 1071.00 461.00 L 1071.00 499.00 Q 1071.00 515.00 1055.66 519.53 L 954.34 549.47 Q 939.00 554.00 923.60 549.64 L 848.40 528.36 Q 833.00 524.00 833.00 508.00 Z" /></clipPath>
+          <clipPath id="platform-04"><path d="M 1045.79 409.58 L 1090.21 396.42 Q 1095 395 1099.63 396.90 L 1146.37 416.10 Q 1151 418 1151.00 423.00 L 1151.00 469.00 Q 1151 474 1146.24 475.53 L 1099.76 490.47 Q 1095 492 1090.23 490.50 L 1045.77 476.50 Q 1041 475 1041.00 470.00 L 1041.00 416.00 Q 1041 411 1045.79 409.58 Z" /></clipPath>
+          <clipPath id="platform-05"><path d="M 1128.00 412.00 Q 1128.00 396.00 1143.48 391.97 L 1231.52 369.03 Q 1247.00 365.00 1262.68 368.16 L 1360.32 387.84 Q 1376.00 391.00 1376.00 407.00 L 1376.00 449.00 Q 1376.00 465.00 1360.41 468.60 L 1261.59 491.40 Q 1246.00 495.00 1230.46 491.18 L 1143.54 469.82 Q 1128.00 466.00 1128.00 450.00 Z" /></clipPath>
+          <clipPath id="platform-06"><path d="M 1359.79 364.56 L 1410.21 349.44 Q 1415 348 1419.80 349.39 L 1472.20 364.61 Q 1477 366 1477.00 371.00 L 1477.00 428.00 Q 1477 433 1472.23 434.51 L 1421.77 450.49 Q 1417 452 1412.22 450.53 L 1359.78 434.47 Q 1355 433 1355.00 428.00 L 1355.00 371.00 Q 1355 366 1359.79 364.56 Z" /></clipPath>
+          <clipPath id="platform-07"><path d="M 1459.00 360.00 Q 1459.00 344.00 1474.55 340.22 L 1554.45 320.78 Q 1570.00 317.00 1585.63 320.40 L 1669.37 338.60 Q 1685.00 342.00 1685.00 358.00 L 1685.00 395.00 Q 1685.00 411.00 1669.54 415.12 L 1580.46 438.88 Q 1565.00 443.00 1549.50 439.05 L 1474.50 419.95 Q 1459.00 416.00 1459.00 400.00 Z" /></clipPath>
+          <clipPath id="platform-08"><path d="M 1659.00 321.00 Q 1659.00 305.00 1674.59 301.42 L 1778.41 277.58 Q 1794.00 274.00 1809.71 277.02 L 1908.29 295.98 Q 1924.00 299.00 1924.00 315.00 L 1924.00 367.00 Q 1924.00 383.00 1908.37 386.41 L 1797.63 410.59 Q 1782.00 414.00 1766.40 410.45 L 1674.60 389.55 Q 1659.00 386.00 1659.00 370.00 Z" /></clipPath>
+          <mask id="icons-clear" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778">
+            <rect width="2022" height="778" fill="white" />
+            <rect x="520" y="402" width="211" height="150" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="759" y="405" width="67" height="71" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="861" y="344" width="159" height="126" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1071" y="339" width="60" height="73" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1162" y="285" width="162" height="130" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1380" y="293" width="69" height="73" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1494" y="242" width="152" height="116" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1690" y="167" width="179" height="162" rx="8" fill="black" filter="url(#icon-mask-soft)" />
+            <circle cx="1199" cy="551" r="109" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="744" y="369" width="102" height="31" rx="3" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1053" y="302" width="104" height="35" rx="3" fill="black" filter="url(#icon-mask-soft)" />
+            <rect x="1367" y="263" width="102" height="30" rx="3" fill="black" filter="url(#icon-mask-soft)" />
+          </mask>
+          <mask id="platform-occlusion-03" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778"><rect width="2022" height="778" fill="white"/><path filter="url(#occlusion-soft)" d="M 737.74 475.42 L 788.26 458.58 Q 793 457 797.68 458.75 L 847.32 477.25 Q 852 479 852.00 484.00 L 852.00 537.00 Q 852 542 847.17 543.29 L 796.83 556.71 Q 792 558 787.22 556.54 L 737.78 541.46 Q 733 540 733.00 535.00 L 733.00 482.00 Q 733 477 737.74 475.42 Z" fill="black"/></mask>
+          <mask id="platform-occlusion-05" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778"><rect width="2022" height="778" fill="white"/><path filter="url(#occlusion-soft)" d="M 1045.79 409.58 L 1090.21 396.42 Q 1095 395 1099.63 396.90 L 1146.37 416.10 Q 1151 418 1151.00 423.00 L 1151.00 469.00 Q 1151 474 1146.24 475.53 L 1099.76 490.47 Q 1095 492 1090.23 490.50 L 1045.77 476.50 Q 1041 475 1041.00 470.00 L 1041.00 416.00 Q 1041 411 1045.79 409.58 Z" fill="black"/></mask>
+          <mask id="platform-occlusion-07" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778"><rect width="2022" height="778" fill="white"/><path filter="url(#occlusion-soft)" d="M 1359.79 364.56 L 1410.21 349.44 Q 1415 348 1419.80 349.39 L 1472.20 364.61 Q 1477 366 1477.00 371.00 L 1477.00 428.00 Q 1477 433 1472.23 434.51 L 1421.77 450.49 Q 1417 452 1412.22 450.53 L 1359.78 434.47 Q 1355 433 1355.00 428.00 L 1355.00 371.00 Q 1355 366 1359.79 364.56 Z" fill="black"/></mask>
+          <mask id="platform-occlusion-08" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778"><rect width="2022" height="778" fill="white"/><path filter="url(#occlusion-soft)" d="M 1459.00 360.00 Q 1459.00 344.00 1474.55 340.22 L 1554.45 320.78 Q 1570.00 317.00 1585.63 320.40 L 1669.37 338.60 Q 1685.00 342.00 1685.00 358.00 L 1685.00 395.00 Q 1685.00 411.00 1669.54 415.12 L 1580.46 438.88 Q 1565.00 443.00 1549.50 439.05 L 1474.50 419.95 Q 1459.00 416.00 1459.00 400.00 Z" fill="black"/></mask>
+          <filter id="platform-rim-soft" x="-25%" y="-80%" width="150%" height="260%">
+            <feGaussianBlur stdDeviation="1.1" />
+          </filter>
+          <filter id="platform-rim-glow" x="-25%" y="-80%" width="150%" height="260%">
+            <feGaussianBlur stdDeviation="2.6" />
+          </filter>
+          <linearGradient id="platform-light-edge" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#00bda7" stop-opacity="0" />
+            <stop offset=".5" stop-color="#00bda7" stop-opacity=".32" />
+            <stop offset="1" stop-color="#e5fffb" stop-opacity=".7" />
+          </linearGradient>
+          <!-- Feather the small due-diligence platform behind the foreground platform. -->
+          <filter id="platform-overlap-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="5" />
+          </filter>
+          <mask id="platform-occlusion-04" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778">
+            <rect width="2022" height="778" fill="white" />
+            <path d="M 833.00 468.00 Q 833.00 452.00 848.36 447.51 L 923.64 425.49 Q 939.00 421.00 954.74 423.86 L 1055.26 442.14 Q 1071.00 445.00 1071.00 461.00 L 1071.00 499.00 Q 1071.00 515.00 1055.66 519.53 L 954.34 549.47 Q 939.00 554.00 923.60 549.64 L 848.40 528.36 Q 833.00 524.00 833.00 508.00 Z" fill="black" filter="url(#occlusion-soft)" />
+          </mask>
+          <mask id="platform-occlusion-02" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778">
+            <rect width="2022" height="778" fill="white" />
+            <path d="M 466.00 538.75 Q 466.00 520.00 487.45 515.12 L 611.55 486.88 Q 633.00 482.00 654.47 486.79 L 768.53 512.21 Q 790.00 517.00 790.00 535.25 L 790.00 571.75 Q 790.00 590.00 768.78 595.82 L 647.22 629.18 Q 626.00 635.00 604.66 629.66 L 487.34 600.34 Q 466.00 595.00 466.00 576.25 Z" fill="black" filter="url(#occlusion-soft)" />
+          </mask>
+          <mask id="platform-occlusion-06" maskUnits="userSpaceOnUse" x="0" y="0" width="2022" height="778">
+            <rect width="2022" height="778" fill="white" />
+            <path d="M 1128.00 412.00 Q 1128.00 396.00 1143.48 391.97 L 1231.52 369.03 Q 1247.00 365.00 1262.68 368.16 L 1360.32 387.84 Q 1376.00 391.00 1376.00 407.00 L 1376.00 449.00 Q 1376.00 465.00 1360.41 468.60 L 1261.59 491.40 Q 1246.00 495.00 1230.46 491.18 L 1143.54 469.82 Q 1128.00 466.00 1128.00 450.00 Z" fill="black" filter="url(#occlusion-soft)" />
+          </mask>
+        </defs>
+        <g class="step-highlight" data-step="01" style="--step-delay: 0s" mask="url(#icons-clear)">
+          <g>
+            <g clip-path="url(#platform-01)">
+              <path d="M 466.00 538.75 Q 466.00 520.00 487.45 515.12 L 611.55 486.88 Q 633.00 482.00 654.47 486.79 L 768.53 512.21 Q 790.00 517.00 790.00 535.25 L 790.00 571.75 Q 790.00 590.00 768.78 595.82 L 647.22 629.18 Q 626.00 635.00 604.66 629.66 L 487.34 600.34 Q 466.00 595.00 466.00 576.25 Z" fill="url(#platform-wash)" />
+              <path d="M 489.07 526.63 Q 466.00 520.00 489.40 514.68 L 609.60 487.32 Q 633.00 482.00 656.42 487.22 L 766.58 511.78 Q 790.00 517.00 767.00 523.87 L 649.00 559.13 Q 626.00 566.00 602.93 559.37 Z" fill="url(#platform-top-glow)" />
+            </g>
+              <path d="M 489.07 526.63 Q 466.00 520.00 489.40 514.68 L 609.60 487.32 Q 633.00 482.00 656.42 487.22 L 766.58 511.78 Q 790.00 517.00 767.00 523.87 L 649.00 559.13 Q 626.00 566.00 602.93 559.37 Z" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <path d="M 489.07 526.63 Q 466.00 520.00 489.40 514.68 L 609.60 487.32 Q 633.00 482.00 656.42 487.22 L 766.58 511.78 Q 790.00 517.00 767.00 523.87 L 649.00 559.13 Q 626.00 566.00 602.93 559.37 Z" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="628.5" cy="461.5" rx="200.26" ry="136.08" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="02" style="--step-delay: 2s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-02)">
+            <g filter="url(#platform-overlap-soft)">
+            <g clip-path="url(#platform-02)">
+              <path d="M 737.74 475.42 L 788.26 458.58 Q 793 457 797.68 458.75 L 847.32 477.25 Q 852 479 852.00 484.00 L 852.00 537.00 Q 852 542 847.17 543.29 L 796.83 556.71 Q 792 558 787.22 556.54 L 737.78 541.46 Q 733 540 733.00 535.00 L 733.00 482.00 Q 733 477 737.74 475.42 Z" fill="url(#platform-wash)" />
+              <polygon points="733,477 793,457 852,479 792,490" fill="url(#platform-top-glow)" />
+            </g>
+            </g>
+              <polygon points="733,477 793,457 852,479 792,490" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <polygon points="733,477 793,457 852,479 792,490" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="792.5" cy="433.5" rx="73.78" ry="81.36" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="03" style="--step-delay: 4s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-03)">
+            <g clip-path="url(#platform-03)">
+              <path d="M 833.00 468.00 Q 833.00 452.00 848.36 447.51 L 923.64 425.49 Q 939.00 421.00 954.74 423.86 L 1055.26 442.14 Q 1071.00 445.00 1071.00 461.00 L 1071.00 499.00 Q 1071.00 515.00 1055.66 519.53 L 954.34 549.47 Q 939.00 554.00 923.60 549.64 L 848.40 528.36 Q 833.00 524.00 833.00 508.00 Z" fill="url(#platform-wash)" />
+              <path d="M 852.04 458.11 Q 833.00 452.00 852.20 446.39 L 919.80 426.61 Q 939.00 421.00 958.68 424.58 L 1051.32 441.42 Q 1071.00 445.00 1051.90 450.93 L 958.10 480.07 Q 939.00 486.00 919.96 479.89 Z" fill="url(#platform-top-glow)" />
+            </g>
+              <path d="M 852.04 458.11 Q 833.00 452.00 852.20 446.39 L 919.80 426.61 Q 939.00 421.00 958.68 424.58 L 1051.32 441.42 Q 1071.00 445.00 1051.90 450.93 L 958.10 480.07 Q 939.00 486.00 919.96 479.89 Z" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <path d="M 852.04 458.11 Q 833.00 452.00 852.20 446.39 L 919.80 426.61 Q 939.00 421.00 958.68 424.58 L 1051.32 441.42 Q 1071.00 445.00 1051.90 450.93 L 958.10 480.07 Q 939.00 486.00 919.96 479.89 Z" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="952" cy="390.5" rx="147.56" ry="121.68" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="04" style="--step-delay: 6s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-04)">
+            <g filter="url(#platform-overlap-soft)">
+            <g clip-path="url(#platform-04)">
+              <path d="M 1045.79 409.58 L 1090.21 396.42 Q 1095 395 1099.63 396.90 L 1146.37 416.10 Q 1151 418 1151.00 423.00 L 1151.00 469.00 Q 1151 474 1146.24 475.53 L 1099.76 490.47 Q 1095 492 1090.23 490.50 L 1045.77 476.50 Q 1041 475 1041.00 470.00 L 1041.00 416.00 Q 1041 411 1045.79 409.58 Z" fill="url(#platform-wash)" />
+              <polygon points="1041,411 1095,395 1151,418 1095,428" fill="url(#platform-top-glow)" />
+            </g>
+            </g>
+              <polygon points="1041,411 1095,395 1151,418 1095,428" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <polygon points="1041,411 1095,395 1151,418 1095,428" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="1096" cy="371.5" rx="68.2" ry="81.36" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="05" style="--step-delay: 8s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-05)">
+            <g clip-path="url(#platform-05)">
+              <path d="M 1128.00 412.00 Q 1128.00 396.00 1143.48 391.97 L 1231.52 369.03 Q 1247.00 365.00 1262.68 368.16 L 1360.32 387.84 Q 1376.00 391.00 1376.00 407.00 L 1376.00 449.00 Q 1376.00 465.00 1360.41 468.60 L 1261.59 491.40 Q 1246.00 495.00 1230.46 491.18 L 1143.54 469.82 Q 1128.00 466.00 1128.00 450.00 Z" fill="url(#platform-wash)" />
+              <path d="M 1149.09 402.26 Q 1128.00 396.00 1149.29 390.45 L 1225.71 370.55 Q 1247.00 365.00 1268.57 369.35 L 1354.43 386.65 Q 1376.00 391.00 1354.97 397.47 L 1267.03 424.53 Q 1246.00 431.00 1224.91 424.74 Z" fill="url(#platform-top-glow)" />
+            </g>
+              <path d="M 1149.09 402.26 Q 1128.00 396.00 1149.29 390.45 L 1225.71 370.55 Q 1247.00 365.00 1268.57 369.35 L 1354.43 386.65 Q 1376.00 391.00 1354.97 397.47 L 1267.03 424.53 Q 1246.00 431.00 1224.91 424.74 Z" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <path d="M 1149.09 402.26 Q 1128.00 396.00 1149.29 390.45 L 1225.71 370.55 Q 1247.00 365.00 1268.57 369.35 L 1354.43 386.65 Q 1376.00 391.00 1354.97 397.47 L 1267.03 424.53 Q 1246.00 431.00 1224.91 424.74 Z" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="1252" cy="335.5" rx="153.76" ry="123.12" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="06" style="--step-delay: 10s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-06)">
+            <g filter="url(#platform-overlap-soft)">
+            <g clip-path="url(#platform-06)">
+              <path d="M 1359.79 364.56 L 1410.21 349.44 Q 1415 348 1419.80 349.39 L 1472.20 364.61 Q 1477 366 1477.00 371.00 L 1477.00 428.00 Q 1477 433 1472.23 434.51 L 1421.77 450.49 Q 1417 452 1412.22 450.53 L 1359.78 434.47 Q 1355 433 1355.00 428.00 L 1355.00 371.00 Q 1355 366 1359.79 364.56 Z" fill="url(#platform-wash)" />
+              <polygon points="1355,366 1415,348 1477,366 1417,377" fill="url(#platform-top-glow)" />
+            </g>
+            </g>
+              <polygon points="1355,366 1415,348 1477,366 1417,377" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <polygon points="1355,366 1415,348 1477,366 1417,377" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="1416" cy="322.5" rx="75.64" ry="78.48" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="07" style="--step-delay: 12s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-07)">
+            <g clip-path="url(#platform-07)">
+              <path d="M 1459.00 360.00 Q 1459.00 344.00 1474.55 340.22 L 1554.45 320.78 Q 1570.00 317.00 1585.63 320.40 L 1669.37 338.60 Q 1685.00 342.00 1685.00 358.00 L 1685.00 395.00 Q 1685.00 411.00 1669.54 415.12 L 1580.46 438.88 Q 1565.00 443.00 1549.50 439.05 L 1474.50 419.95 Q 1459.00 416.00 1459.00 400.00 Z" fill="url(#platform-wash)" />
+              <path d="M 1480.12 350.18 Q 1459.00 344.00 1480.38 338.80 L 1548.62 322.20 Q 1570.00 317.00 1591.50 321.67 L 1663.50 337.33 Q 1685.00 342.00 1663.79 347.83 L 1586.21 369.17 Q 1565.00 375.00 1543.88 368.82 Z" fill="url(#platform-top-glow)" />
+            </g>
+              <path d="M 1480.12 350.18 Q 1459.00 344.00 1480.38 338.80 L 1548.62 322.20 Q 1570.00 317.00 1591.50 321.67 L 1663.50 337.33 Q 1685.00 342.00 1663.79 347.83 L 1586.21 369.17 Q 1565.00 375.00 1543.88 368.82 Z" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <path d="M 1480.12 350.18 Q 1459.00 344.00 1480.38 338.80 L 1548.62 322.20 Q 1570.00 317.00 1591.50 321.67 L 1663.50 337.33 Q 1685.00 342.00 1663.79 347.83 L 1586.21 369.17 Q 1565.00 375.00 1543.88 368.82 Z" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="1572" cy="285.5" rx="140.12" ry="120.24" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+        <g class="step-highlight" data-step="08" style="--step-delay: 14s" mask="url(#icons-clear)">
+          <g mask="url(#platform-occlusion-08)">
+            <g clip-path="url(#platform-08)">
+              <path d="M 1659.00 321.00 Q 1659.00 305.00 1674.59 301.42 L 1778.41 277.58 Q 1794.00 274.00 1809.71 277.02 L 1908.29 295.98 Q 1924.00 299.00 1924.00 315.00 L 1924.00 367.00 Q 1924.00 383.00 1908.37 386.41 L 1797.63 410.59 Q 1782.00 414.00 1766.40 410.45 L 1674.60 389.55 Q 1659.00 386.00 1659.00 370.00 Z" fill="url(#platform-wash)" />
+              <path d="M 1682.03 311.74 Q 1659.00 305.00 1682.39 299.63 L 1770.61 279.37 Q 1794.00 274.00 1817.57 278.53 L 1900.43 294.47 Q 1924.00 299.00 1900.99 305.81 L 1805.01 334.19 Q 1782.00 341.00 1758.97 334.26 Z" fill="url(#platform-top-glow)" />
+            </g>
+              <path d="M 1682.03 311.74 Q 1659.00 305.00 1682.39 299.63 L 1770.61 279.37 Q 1794.00 274.00 1817.57 278.53 L 1900.43 294.47 Q 1924.00 299.00 1900.99 305.81 L 1805.01 334.19 Q 1782.00 341.00 1758.97 334.26 Z" fill="none" stroke="#0aaf98" stroke-opacity=".94" stroke-width="6" filter="url(#platform-rim-glow)" />
+              <path d="M 1682.03 311.74 Q 1659.00 305.00 1682.39 299.63 L 1770.61 279.37 Q 1794.00 274.00 1817.57 278.53 L 1900.43 294.47 Q 1924.00 299.00 1900.99 305.81 L 1805.01 334.19 Q 1782.00 341.00 1758.97 334.26 Z" fill="none" stroke="#d7fff4" stroke-opacity=".48" stroke-width="1.8" stroke-linejoin="round" filter="url(#platform-rim-soft)" />
+            <g class="platform-uplight" filter="url(#uplight-soft)">
+              <ellipse cx="1791.5" cy="243" rx="164.3" ry="120.96" fill="url(#uplight-halo)" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg class="badge-copy-layer" viewBox="0 0 2022 778" role="img" aria-label="统一语义、可信约束、审批溯源" focusable="false">
+        <foreignObject x="0" y="0" width="2022" height="778"><canvas xmlns="http://www.w3.org/1999/xhtml" id="badge-copy-background" width="2022" height="778" style="width:100%;height:100%" aria-hidden="true"></canvas></foreignObject>
+        <g fill="#193b62" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="500" aria-hidden="true">
+          <text x="1175" y="705">可信约束</text>
+          <text x="1414" y="688" transform="rotate(-7 1414 688)">审批溯源</text>
+        </g>
+      </svg>
+    </main>
+  </body>
+</html>
