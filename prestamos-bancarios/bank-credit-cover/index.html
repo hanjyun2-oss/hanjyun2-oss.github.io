@@ -6,17 +6,10 @@
     <meta name="description" content="本体空间赋能银行信贷：打通数据与规则，提升授信决策效率。" />
     <title>本体空间赋能银行信贷</title>
     <script>
-      const coverLanguage = new URLSearchParams(location.search).get('lang')
-      if (coverLanguage === 'en' || coverLanguage === 'es-419') {
-        document.documentElement.dataset.locale = coverLanguage
-        document.addEventListener('DOMContentLoaded', () => {
-          const coverImage = document.querySelector('.cover-image')
-          coverImage.src = `./assets/credit-cover-${coverLanguage}.png`
-          coverImage.alt = coverLanguage === 'en'
-            ? 'Ontology Space for Bank Credit: eight stages from business profiling to risk response. Illustrative demo only.'
-            : 'Espacio ontológico para crédito bancario: ocho etapas desde el perfil empresarial hasta la gestión del riesgo. Demostración ilustrativa.'
-        }, { once: true })
-      }
+      const requestedCoverLanguage = new URLSearchParams(location.search).get('lang')
+      const coverLanguage = ['en', 'es-419'].includes(requestedCoverLanguage) ? requestedCoverLanguage : 'zh-CN'
+      document.documentElement.lang = coverLanguage
+      if (coverLanguage !== 'zh-CN') document.documentElement.dataset.locale = coverLanguage
     </script>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./fit.js" defer></script>
@@ -26,13 +19,21 @@
     <main class="cover" aria-label="银行信贷本体空间封面">
       <img
         class="cover-image"
-        src="./assets/credit-cover.png"
         width="2022"
         height="778"
         fetchpriority="high"
         draggable="false"
         alt="本体空间赋能银行信贷。打通数据与规则，提升授信决策效率。信贷业务痛点：客户真实性难辨，核验成本高；准入规则繁杂，真实风险难判断；人工匹配效率低，产品选择依赖经验；风险发现滞后，前瞻预警不足；规模与风控冲突，处置偏被动。信贷流程：01 企业画像，整合经营、财务、资质、风险；02 征信核验；03 评级准入，统一规则，自动校验；04 现场尽调；05 产品匹配，按客户特征智能推荐；06 授信放款；07 贷后监控，持续监测，及时预警；08 风险处置，识别风险，推动处置。本体空间：统一语义、可信约束、审批溯源。"
       />
+      <script>
+        // Select the localized asset before the browser starts downloading an
+        // image; EN/ES must not first download the large Chinese source PNG.
+        const coverImage = document.querySelector('.cover-image')
+        coverImage.src = `./assets/credit-cover${coverLanguage === 'zh-CN' ? '' : `-${coverLanguage}`}.webp`
+        if (coverLanguage !== 'zh-CN') coverImage.alt = coverLanguage === 'en'
+          ? 'Ontology Space for Bank Credit: eight stages from business profiling to risk response. Illustrative demo only.'
+          : 'Espacio ontológico para crédito bancario: ocho etapas desde el perfil empresarial hasta la gestión del riesgo. Demostración ilustrativa.'
+      </script>
       <svg class="pain-copy-layer" viewBox="0 0 2022 778" role="img" aria-label="信贷业务痛点：客户真实性难辨，核验成本高；准入规则繁杂，真实风险难判断；人工匹配效率低，产品选择依赖经验；风险发现滞后，前瞻预警不足；规模与风控冲突，处置偏被动" focusable="false">
         <foreignObject x="0" y="0" width="2022" height="778"><canvas xmlns="http://www.w3.org/1999/xhtml" id="pain-copy-background" width="2022" height="778" style="width:100%;height:100%" aria-hidden="true"></canvas></foreignObject>
         <g fill="#193b62" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="21" font-weight="500" aria-hidden="true">
