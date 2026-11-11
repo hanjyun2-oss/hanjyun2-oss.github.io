@@ -332,7 +332,7 @@
   text-wrap: balance;
 }
 :is(html:lang(en), html:lang(es)) .credit-root {
-  font-family: system-ui, sans-serif;
+  font-family: "Bank Sans", system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 :is(html:lang(en), html:lang(es)) :is(.credit-header h1, .credit-section-title, .credit-proof-title, .credit-authorization-title, .credit-task-title) {
